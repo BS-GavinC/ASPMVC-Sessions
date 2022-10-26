@@ -1,0 +1,11 @@
+﻿@using ASPMVC_Sessions.Services
+@inject SessionManager _sessionManager
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome @_sessionManager.Email</h1>
+    <p>Votre Username est : @_sessionManager.UserName</p>
+</div>
