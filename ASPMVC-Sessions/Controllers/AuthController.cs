@@ -35,8 +35,8 @@ namespace ASPMVC_Sessions.Controllers
 
             if (user.Password == loginViewModel.Password)
             {
-                _sessionManager.Email = user.Email;
-                _sessionManager.UserName = user.UserName;
+                _sessionManager.Log(user);
+                
                 return RedirectToAction("Index", "Home");
             }
 
